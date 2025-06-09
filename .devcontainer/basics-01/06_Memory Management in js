@@ -1,0 +1,44 @@
+// ****************Memory Management*****************************
+//************************************Primitive******************************** */
+/*JavaScript has several built-in data types that can be grouped into primitive and non-primitive (reference) types.
+Primitive Data Types
+Primitive types are immutable and stored by value.USES STACK MEMORY*/
+
+/*NON PRIMITIVE (REFRENCE TYPE)  */
+/*
+These include:
+
+Object
+
+Array
+
+Function
+
+They are stored and passed by reference, not by value.
+*/
+/*Objects (Call by Reference)*/
+let user1 = {
+  name: "Alice"
+};
+
+let user2 = user1; // user2 holds a reference to the same object as user1
+
+user2.name = "Bob";
+
+console.log(user1.name); // 👉 "Bob"
+/*
+why??
+Because both user1 and user2 point to the same memory location, so changing it via user2 reflects in user1.*/
+
+
+/**********************Final Table***********************************/
+/*
+typeof "hello"      // "string"
+typeof 42           // "number"
+typeof true         // "boolean"
+typeof undefined    // "undefined"
+typeof null         // "object" ← (this is a quirk in JavaScript)
+typeof {}           // "object"
+typeof []           // "object"
+typeof function(){} // "function"
+*/
