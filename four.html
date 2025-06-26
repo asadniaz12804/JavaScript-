@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body></body>
+  <script>
+    function TocreateEle(text, bgc) {
+      const div = document.createElement("div");
+      console.log(div);
+      div.className = "main";
+      div.id = Math.round(Math.random() * 10 + 1);
+      div.style.backgroundColor = bgc;
+      div.style.padding = "10px";
+      div.style.borderRadius = "12px";
+      div.setAttribute("title", "DOM learning");
+      // div.innerHTML = text;
+      const addText = document.createTextNode(`${text}`);
+      div.appendChild(addText);
+
+      document.body.appendChild(div);
+    }
+    const items = [
+      { text: "Asad Niaz", bgc: "aqua" },
+      { text: "Tea Time", bgc: "orange" },
+      { text: "Learning DOM", bgc: "lightgreen" },
+    ];
+
+    items.forEach((item) => {
+      TocreateEle(item.text, item.bgc);
+    });
+
+    // TocreateEle("Chai", "green");
+    // TocreateEle("Asad Niaz Bhatti", "brown");
+    // TocreateEle("Niaz Hussain", "aqua");
+  </script>
+</html>

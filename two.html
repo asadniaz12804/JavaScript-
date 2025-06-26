@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM learning</title>
+  </head>
+  <body>
+    <div class="Parent">
+      <div class="Day">Monday</div>
+      <div class="Day">Tuesday</div>
+      <div class="Day">Wednesday</div>
+      <div class="Day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".Parent");
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    // console.log(parent.children[1].innerHTML);
+
+    parent.children[1].style.color = "red";
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //   console.log(parent.children[i].innerHTML);
+    // }
+
+    // const dayOne = document.querySelector(".Day");
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    console.log(parent.childNodes);
+    // How childNodes in JS count elements: It includes all types of nodes (elements, text, comments, etc).
+    // For example, if there are spaces, line breaks, or comments between elements, they are counted as text nodes.
+    // That's why childNodes.length might return 9 even if there are fewer actual HTML elements.
+  </script>
+</html>
